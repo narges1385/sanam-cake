@@ -1,147 +1,175 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>CheeseCake</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
-        <style>
-            body{
-                background-color: rgb(45, 27, 0);
-                background-image: url(photo/IMG_3796.JPG);
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-attachment: fixed;
-            }
-            ul{
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-            }
-            li{
-                display: flex;
-                text-align: center;
-            }
-            li img{
-                width: 45vw;
-                height: auto;
-                border-radius: 50%;
-                border-style: solid;
-                border-width: 0.5vw;
-                border-color: rgb(69, 41, 5);
-                margin: 3vw;
-                margin-right: 1vw;
-                box-shadow: 1vw 1vw rgb(50, 25, 3);
-            }
-            .text{
-                background-image: url(photo/backcheeseJPG.JPG);
-                background-repeat: no-repeat;
-                background-size: cover;
-                border-radius: 50%;
-                border-color: rgb(69, 41, 5);
-                border-style: solid;
-                border-width: 0.5vw;
-                margin: 3vw 0;
-                text-align: center;
-                padding: 10vw;
-                font-size: 7vw;
-                font-family: "El Messiri", sans-serif;
-                text-shadow: 4px 4px rgb(120, 109, 109);
-                color: rgb(44, 27, 3);
-                box-shadow: 1vw 1vw rgb(50, 25, 3);
-            }
-            li .text{
-                flex: 1;
-            }
-            h1{
-                width: 100%;
-                padding: 4vw;
-                margin: 3vw;
-                margin-bottom: 1vw;
-                background-color: rgb(144, 110, 59);
-                border-radius: 140px 0;
-                border-color: rgb(69, 41, 5);
-                border-style: solid;
-                border-width: 0.5vw;
-                font-family: "El Messiri", sans-serif;
-                font-size: 5vw;
-                color:rgb(34, 19, 3);
-                border-style: solid;
-                border-color: rgb(35, 16, 2);
-            }
-            .text{
-                background-image: url(photo/backcheeseJPG.JPG);
-                background-repeat: no-repeat;
-                background-size: cover;
-                border-radius: 50%;
-                border-color: rgb(69, 41, 5);
-                border-style: solid;
-                border-width: 0.5vw;
-                margin: 3vw 0;
-                text-align: center;
-                padding: 10vw;
-                font-size: 7vw;
-                font-family: "El Messiri", sans-serif;
-                text-shadow: 4px 4px rgb(120, 109, 109);
-                color: rgb(44, 27, 3);
-                box-shadow: 1vw 1vw rgb(50, 25, 3);
-            }
-            .mini img{
-                width: 40vw;
-                margin: 3vw;
-                border-radius: 200px;
-                box-shadow: 3vw 3vw rgb(38, 18, 1);
-                border-color: rgb(69, 41, 5);
-                border-style: solid;
-                border-width: 0.5vw;
-            }
-        </style>
-    </head>
-    <body>
-        <ul>
-            <li><h1>قیمت : 95,000 تومان</h1></li>
-            <li>
-                <img src="photo/cheese1.JPG">
-                <div class="text">نوتلا</div>
-            </li>
-            <li>
-                <img src="photo/cheese2.JPG">
-                <div class="text">لوتوس</div>
-            </li>
-            <li>
-                <img src="photo/cheese3.JPG">
-                <div class="text">نارگیل</div>
-            </li>
-            <li>
-                <img src="photo/cheese4.JPG">
-                <div class="text">اورئو</div>
-            </li>
-            <li>
-                <img src="photo/cheese5.JPG">
-                <div class="text">تیرامیسو</div>
-            </li>
-            <li>
-                <img src="photo/cheese6.JPG">
-                <div class="text">زعفران پسته</div>
-            </li>
-            <li>
-                <img src="photo/cheese7.JPG">
-                <div class="text">پسته</div>
-            </li>
-            <li>
-                <img src="photo/Screenshot 2025-08-19 150404.png">
-                <div class="text">سن سباستین</div>
-            </li>
-            <li><h1>چیز کیک لقمه‌ای</h1></li>
-            <li><h1>قیمت بسته بندی تک دونه : 24,000 تومان</h1></li>
-            <li><h1>قیمت بسته‌ی 24 عددی : 390,000 تومان</h1></li>
-            <div class="mini">
-                <img src="photo/mini1.jpg">
-                <img src="photo/mini2.jpg">
-                <img src="photo/mini3.jpg">
-                <img src="photo/mini4.jpg">
-                <img src="photo/mini5.JPG">
-            </div>
-        </ul>
-    </body>
+
+<head>
+    <title>CheeseCake</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @font-face {
+            font-family: "font";
+            src: url("fonts/El_Messiri/ElMessiri-VariableFont_wght.ttf"), url("fonts/Vazirmatn/Vazirmatn-VariableFont_wght.ttf");
+            font-weight: bold;
+            font-display: swap;
+        }
+
+        body {
+            background-color: rgb(45, 27, 0);
+            background-image: url(photo/IMG_3796.JPG);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: "font";
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            text-align: center;
+        }
+
+        li img {
+            width: 45vw;
+            height: auto;
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 0.5vw;
+            border-color: rgb(69, 41, 5);
+            margin: 3vw;
+            margin-right: 1vw;
+            box-shadow: 1vw 1vw rgb(50, 25, 3);
+        }
+
+        .text {
+            background-image: url(photo/backcheeseJPG.JPG);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+            border-color: rgb(69, 41, 5);
+            border-style: solid;
+            border-width: 0.5vw;
+            margin: 3vw 0;
+            text-align: center;
+            padding: 10vw;
+            font-size: 5vw;
+            text-shadow: 4px 4px rgb(120, 109, 109);
+            color: rgb(44, 27, 3);
+            box-shadow: 1vw 1vw rgb(50, 25, 3);
+        }
+
+        li .text {
+            flex: 1;
+        }
+
+        h1 {
+            width: 100%;
+            padding: 10vw;
+            margin: 3vw;
+            margin-bottom: 1vw;
+            background-color: rgb(144, 110, 59);
+            border-radius: 140px 0;
+            border-color: rgb(69, 41, 5);
+            border-style: solid;
+            border-width: 0.5vw;
+            font-size: 5vw;
+            color: rgb(34, 19, 3);
+            border-style: solid;
+            border-color: rgb(35, 16, 2);
+        }
+
+        .text {
+            background-image: url(photo/backcheeseJPG.JPG);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+            border-color: rgb(69, 41, 5);
+            border-style: solid;
+            border-width: 0.5vw;
+            margin: 3vw 0;
+            text-align: center;
+            padding: 10vw;
+            font-size: 7vw;
+            text-shadow: 4px 4px rgb(120, 109, 109);
+            color: rgb(44, 27, 3);
+            box-shadow: 1vw 1vw rgb(50, 25, 3);
+        }
+
+        .mini{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        .mini img {
+            width: 40vw;
+            margin: 3vw;
+            border-radius: 200px;
+            box-shadow: 3vw 3vw rgb(38, 18, 1);
+            border-color: rgb(69, 41, 5);
+            border-style: solid;
+            border-width: 0.5vw;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <h1>قیمت : 95,000 تومان</h1>
+        </li>
+        <li>
+            <img src="photo/cheese1.JPG">
+            <div class="text">نوتلا</div>
+        </li>
+        <li>
+            <img src="photo/cheese2.JPG">
+            <div class="text">لوتوس</div>
+        </li>
+        <li>
+            <img src="photo/cheese3.JPG">
+            <div class="text">نارگیل</div>
+        </li>
+        <li>
+            <img src="photo/cheese4.JPG">
+            <div class="text">اورئو</div>
+        </li>
+        <li>
+            <img src="photo/cheese5.JPG">
+            <div class="text">تیرامیسو</div>
+        </li>
+        <li>
+            <img src="photo/cheese6.JPG">
+            <div class="text">زعفران پسته</div>
+        </li>
+        <li>
+            <img src="photo/cheese7.JPG">
+            <div class="text">پسته</div>
+        </li>
+        <li>
+            <img src="photo/Screenshot 2025-08-19 150404.png">
+            <div class="text">سن سباستین</div>
+        </li>
+        <li>
+            <h1>چیز کیک لقمه‌ای</h1>
+        </li>
+        <li>
+            <h1>قیمت بسته بندی تک دونه : 24,000 تومان</h1>
+        </li>
+        <li>
+            <h1>قیمت بسته‌ی 24 عددی : 390,000 تومان</h1>
+        </li>
+        <div class="mini">
+            <img src="photo/mini1.jpg">
+            <img src="photo/mini2.jpg">
+            <img src="photo/mini3.jpg">
+            <img src="photo/mini4.jpg">
+            <img src="photo/mini5.JPG">
+        </div>
+    </ul>
+</body>
+
 </html>

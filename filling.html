@@ -1,87 +1,103 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>CakeFilling</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
-        <style>
-            body{
-                background-color: rgb(45, 96, 81);
-            }
-            .main{
-                text-align: center;
-                min-height: 100vh;
-                margin: 3%;
-                border-radius: 60px;
-                padding: 1% 0;
-                box-shadow: 6px 6px 15px rgb(53, 53, 53), -6px -6px 15px rgb(53, 53, 53);
-                background-color: rgb(96, 165, 145);
-            }
-            img{
-                width: 92.3vw;  
-            }
-            p{
-                font-size: 6vw;
-                margin: 9vw;
-                margin-bottom: 4vw;
-                padding: 2vw;
-                text-align: center;
-                border-radius: 50px 0;
-                border-style: solid;
-                border-color: rgb(91, 73, 7);
-                border-width: 1vw;
-                background-color: rgb(186, 166, 84);
-                font-family:  "El Messiri", sans-serif;
-                color: rgb(72, 44, 4);
-                box-shadow: 30px 30px 0 rgb(159, 106, 71);
-            }
-            .right1{
-                margin-left: 30vw;
-                border-radius: 90px 90px 0 90px;
-            }
-            .left1{
-                margin-right: 30vw;
-                border-radius: 90px 90px 90px 0;
-            }
-            .right2{
-                margin-left: 30vw;
-                border-radius: 90px 0 90px 90px;
-            }
-            .left2{
-                margin-right: 30vw;
-                border-radius: 0 90px 90px 90px;
-            }
-            h2{
-                font-size: 5vw;
-                font-family:  "El Messiri", sans-serif;
-                background-color: rgb(141, 122, 98);
-                margin: 5vw;
-                padding: 1vw;
-                border-radius: 50px;
-                border-style: solid;
-                border-color: rgb(41, 83, 78);
-                border-width: 0.5vw;
-                color: rgb(23, 47, 44);
-            }
-            h3{
-                display: inline-block;
-                font-size: 5vw;
-                font-family:  "El Messiri", sans-serif;
-                background-color: rgb(141, 122, 98);
-                margin: 0;
-                padding: 1vw;
-                border-radius: 50px;
-                border-style: solid;
-                border-color: rgb(41, 83, 78);
-                border-width: 0.5vw;
-                color: rgb(23, 47, 44);
-            }
-            
-        </style>
-    </head>
-    <body>
-        <div class="main">
+
+<head>
+    <title>CakeFilling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+        @font-face {
+            font-family: "font";
+            src: url("fonts/El_Messiri/ElMessiri-VariableFont_wght.ttf"), url("fonts/Vazirmatn/Vazirmatn-VariableFont_wght.ttf");
+            font-weight: bold;
+            font-display: swap;
+        }
+
+        body {
+            background-color: rgb(45, 96, 81);
+            font-family: "font";
+        }
+
+        .main {
+            text-align: center;
+            min-height: 100vh;
+            margin: 3%;
+            border-radius: 60px;
+            padding: 1% 0;
+            box-shadow: 6px 6px 15px rgb(53, 53, 53), -6px -6px 15px rgb(53, 53, 53);
+            background-color: rgb(96, 165, 145);
+            padding-bottom: 10vw;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        p {
+            font-size: 6vw;
+            margin: 9vw;
+            margin-bottom: 4vw;
+            padding: 3vw;
+            text-align: center;
+            border-radius: 50px 0;
+            border-style: solid;
+            border-color: rgb(91, 73, 7);
+            border-width: 1vw;
+            background-color: rgb(186, 166, 84);
+            color: rgb(72, 44, 4);
+            box-shadow: 30px 30px 0 rgb(159, 106, 71);
+        }
+
+        .right1 {
+            margin-left: 30vw;
+            border-radius: 90px 90px 0 90px;
+        }
+
+        .left1 {
+            margin-right: 30vw;
+            border-radius: 90px 90px 90px 0;
+        }
+
+        .right2 {
+            margin-left: 30vw;
+            border-radius: 90px 0 90px 90px;
+        }
+
+        .left2 {
+            margin-right: 30vw;
+            border-radius: 0 90px 90px 90px;
+        }
+
+        h2 {
+            font-size: 5vw;
+            background-color: rgb(141, 122, 98);
+            margin: 5vw;
+            padding: 1vw;
+            border-radius: 50px;
+            border-style: solid;
+            border-color: rgb(41, 83, 78);
+            border-width: 0.5vw;
+            color: rgb(23, 47, 44);
+        }
+
+        h3 {
+            display: inline-block;
+            font-size: 5vw;
+            background-color: rgb(141, 122, 98);
+            margin: 0;
+            padding: 1vw;
+            border-radius: 50px;
+            border-style: solid;
+            border-color: rgb(41, 83, 78);
+            border-width: 0.5vw;
+            color: rgb(23, 47, 44);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
         <h2>...قیمت هر کیلو کیک با فیلینگِ</h2>
         <p class="right1">توت فرنگی + موز + گردو</p>
         <h3 class="right2">تومان 1,600,000</h3>
@@ -92,6 +108,7 @@
         <h3 class="right2">تومان 1,700,000</h3>
         <p class="left2">شکلات + موز + گردو</p>
         <h3 class="left2">تومان 1,200,000</h3>
-        </div>
-    </body>
+    </div>
+</body>
+
 </html>

@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>JarCake</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
-        <style>
-        body{
-            background-color: rgb(69, 108, 67);
+
+<head>
+    <title>JarCake</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @font-face {
+            font-family: "font";
+            src: url("fonts/El_Messiri/ElMessiri-VariableFont_wght.ttf"), url("fonts/Vazirmatn/Vazirmatn-VariableFont_wght.ttf");
+            font-weight: bold;
+            font-display: swap;
         }
-        .main{
+
+        body {
+            background-color: rgb(69, 108, 67);
+            font-family: "font";
+        }
+
+        .main {
             text-align: center;
             min-height: 100vh;
             margin: 3%;
@@ -17,10 +26,12 @@
             box-shadow: 6px 6px 15px rgb(53, 53, 53), -6px -6px 15px rgb(53, 53, 53);
             background-color: rgb(184, 179, 167);
         }
-        .container{
+
+        .container {
             display: flex;
         }
-        img{
+
+        img {
             width: 53vw;
             height: 60vw;
             border-radius: 300px;
@@ -28,11 +39,11 @@
             margin-right: 0;
             box-shadow: 6px 6px 10px rgb(10, 10, 10), -6px -6px 10px rgb(10, 10, 10);
         }
-        .p{
+
+        .p {
             color: rgb(200, 197, 189);
-            text-shadow: 1px 1px black,-1px -1px black;
+            text-shadow: 1px 1px black, -1px -1px black;
             font-size: 5vw;
-            font-family: "El Messiri", sans-serif;
             border-radius: 70px;
             border-bottom-left-radius: 0;
             padding: 4vw;
@@ -40,30 +51,32 @@
             background-color: rgb(93, 68, 34);
             margin: 10vw 8vw 40vw 5vw;
         }
-        h3{
+
+        h3 {
             color: rgb(239, 234, 223);
-            text-shadow: 1px 1px black,-1px -1px black;
+            text-shadow: 1px 1px black, -1px -1px black;
             display: inline-block;
             font-size: 6vw;
             padding: 3vw 8vw;
-            font-family: "El Messiri", sans-serif;
             background-color: rgb(88, 129, 78);
             border-radius: 50px;
             box-shadow: -20px 20px rgb(8, 48, 22);
         }
-        </style>
-    </head>
-    <body>
-        <div class="main">
-            <h3>قیمت: 50,000 تومان</h3>
-            <div class="container">    
-                <img src="photo/jarcake1.JPG">
-                <p class="p">شکلاتی</p>
-            </div>
-            <div class="container">    
-                <img src="photo/jarcake2.JPG">
-                <p class="p">هویج</p>
-            </div>
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h3>قیمت: 50,000 تومان</h3>
+        <div class="container">
+            <img src="photo/jarcake1.JPG">
+            <p class="p">شکلاتی</p>
         </div>
-    </body>
+        <div class="container">
+            <img src="photo/jarcake2.JPG">
+            <p class="p">هویج</p>
+        </div>
+    </div>
+</body>
+
 </html>

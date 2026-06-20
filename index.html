@@ -1,108 +1,121 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SanamCake</title>
-        <style>
-            @media (max-width: 768px){
-                .container{
-                    background-color: red;
-                    margin: 100px;
-                    padding: 100px;
-                }
-            }
-            body{
-                background-color: rgb(173, 52, 82);
-            }
-            .main{
-                text-align: center;
-                min-height: 100vh;
-                margin: 3%;
-                border-radius: 40px;
-                box-shadow: 6px 6px 15px rgb(53, 53, 53), -6px -6px 15px rgb(53, 53, 53);
-                background-color: rgb(255, 156, 181);
-            }
-            .about{
-                text-align: center;
-            }
-            ul{
-                list-style-type: none;
-                margin: 0;
-                padding: 2% 0;
-                align-items: center;
-            }
-            a{
-                text-decoration: none;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                font-size: 5vw;
-                font-weight: 400;
-                color: rgb(40, 66, 46);
-            }
-            a:hover{
-                font-size: 7vw;
-                font-weight: 500;
-                color: rgb(86, 19, 56);
-            }
-            a:active{
-                font-size: 7vw;
-                font-weight: 500;
-                color: rgb(86, 19, 56);
-            }
-            li{
-                background-size: contain;
-                padding: 10%;
-                margin: 6%;
-                background-repeat: no-repeat;    
-                background-color: rgb(179, 204, 159);        
-                border-radius: 35px;
-                box-shadow: 4px 4px 15px rgb(153, 65, 103), -4px -4px 15px rgb(153, 65, 103);
-            }
-            h1{
-                padding: 3vh;
-                color: rgb(126, 11, 59);
-                font-family: serif;
-                font-size: 10vw;
-            }
-            .instagram{
-                background-image: url(photo/instagram.JPG);
-                background-size: 10vw;
-                background-position: left;
-                background-repeat: no-repeat;
-                padding: 0 10vw;
-                text-decoration: underline;
-                color: rgb(66, 61, 61);            
-            }     
-            .instagram:hover{
-                font-size: 5vw;
-            }  
-            .instagram:active{
-                font-size: 5vw;
-            }  
-            p{
-                font-size: 4vw;
-                color: rgb(47, 47, 47);
-            }     
-        </style>
-    </head>
-    
-    <div class="cintainer">
-        <div class="main">
-            <ul>
-                <h1>Sanam Cake</h1>
-                <li style="background-image: url(photo/li1.JPG);"><a href="CheeseCake.html">چیز کیک</a></li>
-                <li style="background-image: url(photo/li3.PNG);"><a href="rollCake.html">رولت</a></li>
-                <li style="background-image: url(photo/li2.JPG);"><a href="filling.html">فیلینگ کیک</a></li>
-                <li style="background-image: url(photo/li4.JPG);"><a href="Dessert.html">دسر</a></li>
-                <li><a href="JarCake.html">جار کیک</a></li>
-                <li><a href="Baghlava.html">باقلوا</a></li>
-                <li><a href="Halva.html">حلوا</a></li>
-            </ul>
-        </div>
-        <div class="about">
-            <a class="instagram" href="https://www.instagram.com/sanam.cake?igsh=ZnlkMmhsOWxxZGhp&utm_source=qr">instagram</a>
-            <p>phone number: 09158318043_09014062813</p>
-        </div>
 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SanamCake</title>
+    <style>
+        @font-face {
+            font-family: "font";
+            src: url("fonts/El_Messiri/ElMessiri-VariableFont_wght.ttf"), url("fonts/Vazirmatn/Vazirmatn-VariableFont_wght.ttf");
+            font-weight: bold;
+            font-display: swap;
+        }
+
+        body {
+            background-color: rgb(173, 52, 82);
+            font-family: "font";
+        }
+
+        .main {
+            text-align: center;
+            min-height: 100vh;
+            margin: 3%;
+            border-radius: 40px;
+            box-shadow: 6px 6px 15px rgb(53, 53, 53), -6px -6px 15px rgb(53, 53, 53);
+            background-color: rgb(255, 156, 181);
+        }
+
+        .about {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 2% 0;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 5vw;
+            color: rgb(40, 66, 46);
+        }
+
+        a:hover {
+            font-size: 7vw;
+            font-weight: 500;
+            color: rgb(86, 19, 56);
+        }
+
+        a:active {
+            font-size: 7vw;
+            font-weight: 500;
+            color: rgb(86, 19, 56);
+        }
+
+        li {
+            background-size: contain;
+            padding: 10%;
+            margin: 6%;
+            background-repeat: no-repeat;
+            background-color: rgb(179, 204, 159);
+            border-radius: 35px;
+            box-shadow: 4px 4px 15px rgb(153, 65, 103), -4px -4px 15px rgb(153, 65, 103);
+        }
+
+        h1 {
+            padding: 3vh;
+            color: rgb(126, 11, 59);
+            font-size: 10vw;
+        }
+
+        .instagram {
+            background-image: url(photo/instagram.JPG);
+            background-size: 10vw;
+            background-position: left;
+            background-repeat: no-repeat;
+            padding: 0 10vw;
+            text-decoration: underline;
+            color: rgb(66, 61, 61);
+        }
+
+        .instagram:hover {
+            font-size: 5vw;
+        }
+
+        .instagram:active {
+            font-size: 5vw;
+        }
+
+        p {
+            font-size: 4vw;
+            color: rgb(47, 47, 47);
+        }
+    </style>
+</head>
+
+<div class="cintainer">
+    <div class="main">
+        <ul>
+            <h1>Sanam Cake</h1>
+            <li style="background-image: url(photo/li1.JPG);"><a href="CheeseCake.html">چیز کیک</a></li>
+            <li style="background-image: url(photo/li3.PNG);"><a href="rollCake.html">رولت</a></li>
+            <li style="background-image: url(photo/li2.JPG);"><a href="filling.html">فیلینگ کیک</a></li>
+            <li style="background-image: url(photo/li4.JPG);"><a href="Dessert.html">دسر</a></li>
+            <li style="background-image: url(photo/li5.PNG);"><a href="JarCake.html">جار کیک</a></li>
+            <li style="background-image: url(photo/li7.PNG);"><a href="Baghlava.html">باقلوا</a></li>
+            <li style="background-image: url(photo/li6.PNG);"><a href="Halva.html">حلوا</a></li>
+        </ul>
     </div>
-    </body>
+    <div class="about">
+        <a class="instagram"
+            href="https://www.instagram.com/sanam.cake?igsh=ZnlkMmhsOWxxZGhp&utm_source=qr">instagram</a>
+        <p>phone number: 09158318043_09014062813</p>
+    </div>
+
+</div>
+</body>
+
 </html>
