@@ -224,20 +224,38 @@
 
 <script>
     let timer;
+    let active_copy = null;
 
     const call = document.getElementById("call");
 
     function copy(num, el, event) {
-
+        
         event.stopPropagation();
 
         navigator.clipboard.writeText(num);
-        el.innerHTML =
-                `<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+
+        
+        if(active_copy && active_copy != el){
+            resetButton(active_copy);
+        }
+
+        el.innerHTML = `<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-6 7 2 2 4-4m-5-9v4h4V3h-4Z" />
                 </svg>`;
+        active_copy = el;
+
+        clearTimeout(timer);
+        
+        timer = setTimeout(() => {
+            resetButton(el);
+            active_copy = null;
+        }, 3000);
         setTimeout(() => {
-            el.innerHTML =
+            call.classList.remove("active");
+        }, 4000);
+    }
+    function resetButton(el){
+        el.innerHTML =
                 `<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                 viewBox="0 0 24 24">
@@ -248,10 +266,6 @@
                 d="M8 7.054V11H4.2a2 2 0 0 1 .281-.432l2.46-2.87A2 2 0 0 1 8 7.054ZM10 7v4a2 2 0 0 1-2 2H4v6a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3Z"
                 clip-rule="evenodd" />
                 </svg>`;
-        }, 3000);
-        setTimeout(() => {
-            call.classList.remove("active");
-        }, 4000);
     }
     function toggle(el){
         el.classList.toggle("active");
