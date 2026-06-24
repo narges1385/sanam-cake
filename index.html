@@ -26,11 +26,89 @@
             background-color: rgb(255, 156, 181);
         }
 
-        .about {
-            text-align: center;
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 25px 0;
+            height: 30px;
+            align-items: center;
         }
 
-        ul {
+        .icon {
+            display: flex;
+            height: 30px;
+            align-items: center;
+            grid-area: 10px;
+        }
+
+        .call {
+            position: relative;
+        }
+
+        .call ul {
+            display: none;
+            list-style: none;
+            padding-left: 0;
+            margin-left: -60px;
+            margin-top: 0;
+            z-index: 1;
+            background-color: rgb(169, 70, 113);
+            border-radius: 10px;
+        }
+
+        .call li {
+            font-size: 15px;
+            padding: 10px;
+            color: bisque;
+        }
+
+        .call a {
+            color: bisque;
+        }
+
+        .call li:first-child {
+            border-bottom: 1.5px solid bisque;
+        }
+
+        .call.active ul {
+            display: flex;
+            position: absolute;
+            flex-direction: column;
+        }
+
+        .call:hover, .call:active{
+            cursor: pointer;
+        }
+
+        .option {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 24px;
+        }
+
+        .option a {
+            color: rgb(147, 166, 132);
+        }
+
+        .call button {
+            all: unset;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 24px;
+            color: rgb(147, 166, 132);
+        }
+        
+
+        h1 {
+            color: rgb(113, 11, 53);
+            font-size: 30px;
+            margin: 0;
+        }
+
+        .items {
             list-style-type: none;
             margin: 0;
             padding: 2% 0;
@@ -43,63 +121,96 @@
             color: rgb(40, 66, 46);
         }
 
-        a:hover {
-            font-size: 7vw;
-            font-weight: 500;
-            color: rgb(86, 19, 56);
-        }
-
-        a:active {
-            font-size: 7vw;
-            font-weight: 500;
-            color: rgb(86, 19, 56);
-        }
-
-        li {
+        .items li {
             background-size: contain;
             padding: 10%;
             margin: 6%;
             background-repeat: no-repeat;
             background-color: rgb(179, 204, 159);
             border-radius: 35px;
-            box-shadow: 4px 4px 15px rgb(153, 65, 103), -4px -4px 15px rgb(153, 65, 103);
+            box-shadow: 2px 2px 15px rgb(153, 65, 103), -2px -2px 15px rgb(153, 65, 103);
+            position: relative;
+            overflow: hidden;
         }
 
-        h1 {
-            padding: 3vh;
-            color: rgb(126, 11, 59);
-            font-size: 10vw;
-        }
-
-        .instagram {
-            background-image: url(photo/instagram.JPG);
-            background-size: 10vw;
-            background-position: left;
-            background-repeat: no-repeat;
-            padding: 0 10vw;
-            text-decoration: underline;
-            color: rgb(66, 61, 61);
-        }
-
-        .instagram:hover {
-            font-size: 5vw;
-        }
-
-        .instagram:active {
-            font-size: 5vw;
-        }
-
-        p {
-            font-size: 4vw;
-            color: rgb(47, 47, 47);
+        .items li:hover::before,
+        .items li:active::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(44, 44, 44, 0.459), transparent);
         }
     </style>
 </head>
 
 <div class="cintainer">
     <div class="main">
-        <ul>
-            <h1>Sanam Cake</h1>
+
+        <header>
+            <div class="logo">
+                <h1>Sanam Cake</h1>
+            </div>
+            <div class="icon">
+                <a href="https://www.instagram.com/sanam.cake?igsh=ZnlkMmhsOWxxZGhp&utm_source=qr" class="instagram">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" viewBox="0 0 24 24">
+                        <path fill="rgb(113, 11, 53)" fill-rule="evenodd"
+                            d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <div class="call" id="call" onclick="toggle(this)">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" viewBox="0 0 24 24">
+                        <path stroke="rgb(113, 11, 53)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M18.427 14.768 17.2 13.542a1.733 1.733 0 0 0-2.45 0l-.613.613a1.732 1.732 0 0 1-2.45 0l-1.838-1.84a1.735 1.735 0 0 1 0-2.452l.612-.613a1.735 1.735 0 0 0 0-2.452L9.237 5.572a1.6 1.6 0 0 0-2.45 0c-3.223 3.2-1.702 6.896 1.519 10.117 3.22 3.221 6.914 4.745 10.12 1.535a1.601 1.601 0 0 0 0-2.456Z" />
+                    </svg>
+                    <ul>
+                        <li>
+                            09158318043
+                            <div class="option">
+                                <a href="tel:09158318043">call</a>
+                                <button onclick="copy('09158318043', this, event)" id="copy">
+                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path fill-rule="evenodd"
+                                            d="M18 3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1V9a4 4 0 0 0-4-4h-3a1.99 1.99 0 0 0-1 .267V5a2 2 0 0 1 2-2h7Z"
+                                            clip-rule="evenodd" />
+                                        <path fill-rule="evenodd"
+                                            d="M8 7.054V11H4.2a2 2 0 0 1 .281-.432l2.46-2.87A2 2 0 0 1 8 7.054ZM10 7v4a2 2 0 0 1-2 2H4v6a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3Z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            09014062813
+                            <div class="option">
+                                <a href="tel:09014062813">call</a>
+                                <button onclick="copy('09014062813', this, event)" id="copy">
+                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path fill-rule="evenodd"
+                                            d="M18 3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1V9a4 4 0 0 0-4-4h-3a1.99 1.99 0 0 0-1 .267V5a2 2 0 0 1 2-2h7Z"
+                                            clip-rule="evenodd" />
+                                        <path fill-rule="evenodd"
+                                            d="M8 7.054V11H4.2a2 2 0 0 1 .281-.432l2.46-2.87A2 2 0 0 1 8 7.054ZM10 7v4a2 2 0 0 1-2 2H4v6a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3Z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <ul class="items">
             <li style="background-image: url(photo/li1.JPG);"><a href="CheeseCake.html">چیز کیک</a></li>
             <li style="background-image: url(photo/li3.PNG);"><a href="rollCake.html">رولت</a></li>
             <li style="background-image: url(photo/li2.JPG);"><a href="filling.html">فیلینگ کیک</a></li>
@@ -109,13 +220,44 @@
             <li style="background-image: url(photo/li6.PNG);"><a href="Halva.html">حلوا</a></li>
         </ul>
     </div>
-    <div class="about">
-        <a class="instagram"
-            href="https://www.instagram.com/sanam.cake?igsh=ZnlkMmhsOWxxZGhp&utm_source=qr">instagram</a>
-        <p>phone number: 09158318043_09014062813</p>
-    </div>
-
 </div>
+
+<script>
+    let timer;
+
+    const call = document.getElementById("call");
+
+    function copy(num, el, event) {
+
+        event.stopPropagation();
+
+        navigator.clipboard.writeText(num);
+        el.innerHTML =
+                `<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-6 7 2 2 4-4m-5-9v4h4V3h-4Z" />
+                </svg>`;
+        setTimeout(() => {
+            el.innerHTML =
+                `<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                viewBox="0 0 24 24">
+                <path fill-rule="evenodd"
+                d="M18 3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1V9a4 4 0 0 0-4-4h-3a1.99 1.99 0 0 0-1 .267V5a2 2 0 0 1 2-2h7Z"
+                clip-rule="evenodd" />
+                <path fill-rule="evenodd"
+                d="M8 7.054V11H4.2a2 2 0 0 1 .281-.432l2.46-2.87A2 2 0 0 1 8 7.054ZM10 7v4a2 2 0 0 1-2 2H4v6a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3Z"
+                clip-rule="evenodd" />
+                </svg>`;
+        }, 3000);
+        setTimeout(() => {
+            call.classList.remove("active");
+        }, 4000);
+    }
+    function toggle(el){
+        el.classList.toggle("active");
+    }
+
+</script>
 </body>
 
 </html>
