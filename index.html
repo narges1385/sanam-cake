@@ -284,9 +284,6 @@
             resetButton(el);
             active_copy = null;
         }, 3000);
-        setTimeout(() => {
-            call.classList.remove("active");
-        }, 4000);
     }
     function resetButton(el) {
         el.innerHTML =
@@ -309,6 +306,9 @@
         if(!isActive){
             el.classList.add("active");
         }
+        setTimeout(() => {
+            el.classList.remove("active");
+        }, 6000);
     }
     
 
