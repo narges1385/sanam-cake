@@ -15,12 +15,14 @@
         body {
             background-color: rgb(173, 52, 82);
             font-family: "font";
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
         .main {
             text-align: center;
             min-height: 100vh;
-            margin: 3%;
+            margin: 6% 3%;
             border-radius: 40px;
             box-shadow: 6px 6px 15px rgb(53, 53, 53), -6px -6px 15px rgb(53, 53, 53);
             background-color: rgb(255, 156, 181);
@@ -37,14 +39,15 @@
         .icon {
             display: flex;
             height: 30px;
-            grid-area: 10px;
             align-items: center;
         }
 
-        .instagram{
-            margin-top: 1px;
+        .instagram .call .about{
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
+ 
         .about{
             position: relative;
         }
@@ -100,11 +103,6 @@
             flex-direction: column;
         }
 
-        .call:hover,
-        .call:active {
-            cursor: pointer;
-        }
-
         .option {
             display: flex;
             justify-content: space-around;
@@ -142,7 +140,7 @@
 
         a {
             text-decoration: none;
-            font-size: 5vw;
+            font-size: 25px;
             color: rgb(40, 66, 46);
         }
 
@@ -168,6 +166,12 @@
             bottom: 0;
             background: linear-gradient(to top, rgba(44, 44, 44, 0.459), transparent);
         }
+
+        @media screen and (min-width: 768px){
+            .main{
+                margin: 6% 20%;
+            }
+        }
     </style>
 </head>
 
@@ -187,7 +191,7 @@
                             clip-rule="evenodd" />
                     </svg>
                 </a>
-                <div class="call toggle" id="call" onclick="toggle(this)">
+                <div class="call toggle" id="call" onclick="toggle(this, event)">
                     <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" viewBox="0 0 24 24">
                         <path stroke="rgb(113, 11, 53)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -232,7 +236,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="about toggle" onclick="toggle(this)">
+                <div class="about toggle" onclick="toggle(this, event)">
                     <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="rgb(113, 11, 53)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -298,18 +302,24 @@
                 clip-rule="evenodd" />
                 </svg>`;
     }
-    function toggle(el) {
-        const isActive = el.classList.contains("active")
+    function toggle(el, event) {
+        event.stopPropagation();
+        const isActive = el.classList.contains("active");
         document.querySelectorAll(".toggle").forEach(item => {
-            item.classList.remove("active");
+            if(item !== el){
+                item.classList.remove("active");
+            }
         });
         if(!isActive){
             el.classList.add("active");
         }
-        setTimeout(() => {
-            el.classList.remove("active");
-        }, 6000);
     }
+
+    document.addEventListener("click" , function(){
+        document.querySelectorAll(".toggle").forEach(item => {
+            item.classList.remove("active");
+        });
+    });
     
 
 </script>
