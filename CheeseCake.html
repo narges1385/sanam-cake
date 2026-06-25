@@ -14,12 +14,73 @@
         }
 
         body {
+            font-family: "font";
+            margin: 0;
             background-color: rgb(45, 27, 0);
             background-image: url(photo/IMG_3796.JPG);
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
-            font-family: "font";
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .main{
+            width: 375px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+            gap: 200px;
+        }
+
+        h1 {
+            color: rgb(105, 81, 44);
+        }
+
+        a {
+            color: rgb(105, 81, 44);
+        }
+
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: rgba(240, 248, 255, 0.479);
+        }
+
+        .name {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about svg {
+            margin: 0 10px;
+        }
+
+        .price {
+            margin-left: 30px;
+            direction: rtl;
+        }
+
+        .about-price {
+            margin-right: 25px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: rgba(240, 248, 255, 0.479);
+        }
+
+        .mini-name {
+            display: flex;
+            justify-content: flex-end;
+            gap: 5px;
+            margin: 50px 10px 0 0;
         }
 
         ul {
@@ -31,145 +92,173 @@
         li {
             display: flex;
             text-align: center;
+            justify-content: space-between;
+            margin-top: 15px;
         }
 
         li img {
-            width: 45vw;
+            width: 160px;
             height: auto;
             border-radius: 50%;
-            border-style: solid;
-            border-width: 0.5vw;
-            border-color: rgb(69, 41, 5);
-            margin: 3vw;
-            margin-right: 1vw;
-            box-shadow: 1vw 1vw rgb(50, 25, 3);
+            border: 2px solid rgb(69, 41, 5);
+            box-shadow: 1vw 1vw 10px rgb(50, 25, 3);
+            margin-left: 10px;
         }
 
         .text {
             background-image: url(photo/backcheeseJPG.JPG);
             background-repeat: no-repeat;
             background-size: cover;
+            width: 110px;
             border-radius: 50%;
-            border-color: rgb(69, 41, 5);
-            border-style: solid;
-            border-width: 0.5vw;
-            margin: 3vw 0;
+            border: 5px solid rgb(69, 41, 5);
             text-align: center;
-            padding: 10vw;
-            font-size: 5vw;
-            text-shadow: 4px 4px rgb(120, 109, 109);
+            padding: 25px;
+            font-size: 30px;
+            text-shadow: 2px 2px rgb(120, 109, 109);
             color: rgb(44, 27, 3);
-            box-shadow: 1vw 1vw rgb(50, 25, 3);
+            box-shadow: 1vw 1vw 10px rgb(50, 25, 3);
+            margin-right: 10px;
         }
 
-        li .text {
-            flex: 1;
-        }
-
-        h1 {
-            width: 100%;
-            padding: 10vw;
-            margin: 3vw;
-            margin-bottom: 1vw;
-            background-color: rgb(144, 110, 59);
-            border-radius: 140px 0;
-            border-color: rgb(69, 41, 5);
-            border-style: solid;
-            border-width: 0.5vw;
-            font-size: 5vw;
-            color: rgb(34, 19, 3);
-            border-style: solid;
-            border-color: rgb(35, 16, 2);
-        }
-
-        .text {
-            background-image: url(photo/backcheeseJPG.JPG);
-            background-repeat: no-repeat;
-            background-size: cover;
-            border-radius: 50%;
-            border-color: rgb(69, 41, 5);
-            border-style: solid;
-            border-width: 0.5vw;
-            margin: 3vw 0;
-            text-align: center;
-            padding: 10vw;
-            font-size: 7vw;
-            text-shadow: 4px 4px rgb(120, 109, 109);
-            color: rgb(44, 27, 3);
-            box-shadow: 1vw 1vw rgb(50, 25, 3);
-        }
-
-        .mini{
+        .mini {
             display: grid;
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: 160px 160px;
+            row-gap: 15px;
+            column-gap: 20px;
+            justify-content: center;
+            margin-right: 25px;
         }
 
         .mini img {
-            width: 40vw;
-            margin: 3vw;
+            width: 160px;
             border-radius: 200px;
-            box-shadow: 3vw 3vw rgb(38, 18, 1);
-            border-color: rgb(69, 41, 5);
-            border-style: solid;
-            border-width: 0.5vw;
+            box-shadow: 10px 10px 10px rgb(50, 25, 3);
+            border: 5px solid rgb(60, 36, 5);
+            margin: 0 5px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .main {
+                margin: 0 25%;
+            }
+            header{
+                gap: 400px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <ul>
-        <li>
-            <h1>قیمت : 95,000 تومان</h1>
-        </li>
-        <li>
-            <img src="photo/cheese1.JPG">
-            <div class="text">نوتلا</div>
-        </li>
-        <li>
-            <img src="photo/cheese2.JPG">
-            <div class="text">لوتوس</div>
-        </li>
-        <li>
-            <img src="photo/cheese3.JPG">
-            <div class="text">نارگیل</div>
-        </li>
-        <li>
-            <img src="photo/cheese4.JPG">
-            <div class="text">اورئو</div>
-        </li>
-        <li>
-            <img src="photo/cheese5.JPG">
-            <div class="text">تیرامیسو</div>
-        </li>
-        <li>
-            <img src="photo/cheese6.JPG">
-            <div class="text">زعفران پسته</div>
-        </li>
-        <li>
-            <img src="photo/cheese7.JPG">
-            <div class="text">پسته</div>
-        </li>
-        <li>
-            <img src="photo/Screenshot 2025-08-19 150404.png">
-            <div class="text">سن سباستین</div>
-        </li>
-        <li>
-            <h1>چیز کیک لقمه‌ای</h1>
-        </li>
-        <li>
-            <h1>قیمت بسته بندی تک دونه : 24,000 تومان</h1>
-        </li>
-        <li>
-            <h1>قیمت بسته‌ی 24 عددی : 390,000 تومان</h1>
-        </li>
-        <div class="mini">
-            <img src="photo/mini1.jpg">
-            <img src="photo/mini2.jpg">
-            <img src="photo/mini3.jpg">
-            <img src="photo/mini4.jpg">
-            <img src="photo/mini5.JPG">
-        </div>
-    </ul>
+    <header>
+        <a href="index.html">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                width="30" height="30" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M14.5 8.046H11V6.119c0-.921-.9-1.446-1.524-.894l-5.108 4.49a1.2 1.2 0 0 0 0 1.739l5.108 4.49c.624.556 1.524.027 1.524-.893v-1.928h2a3.023 3.023 0 0 1 3 3.046V19a5.593 5.593 0 0 0-1.5-10.954Z" />
+            </svg>
+        </a>
+        <h1>چیز کیک</h1>
+    </header>
+    <div class="main">
+        <ul>
+            <div class="about">
+                <div class="price">
+                    <h2>95,000 تومان</h2>
+                </div>
+                <div class="name">
+                    <h2>چیز کیک تک نفره</h2>
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="rgba(240, 248, 255, 0.479)"
+                        viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M5.535 7.677c.313-.98.687-2.023.926-2.677H17.46c.253.63.646 1.64.977 2.61.166.487.312.953.416 1.347.11.42.148.675.148.779 0 .18-.032.355-.09.515-.06.161-.144.3-.243.412-.1.111-.21.192-.324.245a.809.809 0 0 1-.686 0 1.004 1.004 0 0 1-.324-.245c-.1-.112-.183-.25-.242-.412a1.473 1.473 0 0 1-.091-.515 1 1 0 1 0-2 0 1.4 1.4 0 0 1-.333.927.896.896 0 0 1-.667.323.896.896 0 0 1-.667-.323A1.401 1.401 0 0 1 13 9.736a1 1 0 1 0-2 0 1.4 1.4 0 0 1-.333.927.896.896 0 0 1-.667.323.896.896 0 0 1-.667-.323A1.4 1.4 0 0 1 9 9.74v-.008a1 1 0 0 0-2 .003v.008a1.504 1.504 0 0 1-.18.712 1.22 1.22 0 0 1-.146.209l-.007.007a1.01 1.01 0 0 1-.325.248.82.82 0 0 1-.316.08.973.973 0 0 1-.563-.256 1.224 1.224 0 0 1-.102-.103A1.518 1.518 0 0 1 5 9.724v-.006a2.543 2.543 0 0 1 .029-.207c.024-.132.06-.296.11-.49.098-.385.237-.85.395-1.344ZM4 12.112a3.521 3.521 0 0 1-1-2.376c0-.349.098-.8.202-1.208.112-.441.264-.95.428-1.46.327-1.024.715-2.104.958-2.767A1.985 1.985 0 0 1 6.456 3h11.01c.803 0 1.539.481 1.844 1.243.258.641.67 1.697 1.019 2.72a22.3 22.3 0 0 1 .457 1.487c.114.433.214.903.214 1.286 0 .412-.072.821-.214 1.207A3.288 3.288 0 0 1 20 12.16V19a2 2 0 0 1-2 2h-6a1 1 0 0 1-1-1v-4H8v4a1 1 0 0 1-1 1H6a2 2 0 0 1-2-2v-6.888ZM13 15a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2Z"
+                            clip-rule="evenodd" />
+                    </svg>
+
+                </div>
+            </div>
+
+            <li>
+                <img src="photo/cheese1.JPG">
+                <div class="text">نوتلا</div>
+            </li>
+            <li>
+                <img src="photo/cheese2.JPG">
+                <div class="text">لوتوس</div>
+            </li>
+            <li>
+                <img src="photo/cheese3.JPG">
+                <div class="text">نارگیل</div>
+            </li>
+            <li>
+                <img src="photo/cheese4.JPG">
+                <div class="text">اورئو</div>
+            </li>
+            <li>
+                <img src="photo/cheese5.JPG">
+                <div class="text">تیرامیسو</div>
+            </li>
+            <li>
+                <img src="photo/cheese6.JPG">
+                <div class="text">زعفران پسته</div>
+            </li>
+            <li>
+                <img src="photo/cheese7.JPG">
+                <div class="text">پسته</div>
+            </li>
+            <li>
+                <img src="photo/Screenshot 2025-08-19 150404.png">
+                <div class="text">سن سباستین</div>
+            </li>
+
+            <div class="name mini-name">
+                <h2>چیز کیک لقمه‌ای</h2>
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" fill="rgba(240, 248, 255, 0.479)" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                        d="M5.535 7.677c.313-.98.687-2.023.926-2.677H17.46c.253.63.646 1.64.977 2.61.166.487.312.953.416 1.347.11.42.148.675.148.779 0 .18-.032.355-.09.515-.06.161-.144.3-.243.412-.1.111-.21.192-.324.245a.809.809 0 0 1-.686 0 1.004 1.004 0 0 1-.324-.245c-.1-.112-.183-.25-.242-.412a1.473 1.473 0 0 1-.091-.515 1 1 0 1 0-2 0 1.4 1.4 0 0 1-.333.927.896.896 0 0 1-.667.323.896.896 0 0 1-.667-.323A1.401 1.401 0 0 1 13 9.736a1 1 0 1 0-2 0 1.4 1.4 0 0 1-.333.927.896.896 0 0 1-.667.323.896.896 0 0 1-.667-.323A1.4 1.4 0 0 1 9 9.74v-.008a1 1 0 0 0-2 .003v.008a1.504 1.504 0 0 1-.18.712 1.22 1.22 0 0 1-.146.209l-.007.007a1.01 1.01 0 0 1-.325.248.82.82 0 0 1-.316.08.973.973 0 0 1-.563-.256 1.224 1.224 0 0 1-.102-.103A1.518 1.518 0 0 1 5 9.724v-.006a2.543 2.543 0 0 1 .029-.207c.024-.132.06-.296.11-.49.098-.385.237-.85.395-1.344ZM4 12.112a3.521 3.521 0 0 1-1-2.376c0-.349.098-.8.202-1.208.112-.441.264-.95.428-1.46.327-1.024.715-2.104.958-2.767A1.985 1.985 0 0 1 6.456 3h11.01c.803 0 1.539.481 1.844 1.243.258.641.67 1.697 1.019 2.72a22.3 22.3 0 0 1 .457 1.487c.114.433.214.903.214 1.286 0 .412-.072.821-.214 1.207A3.288 3.288 0 0 1 20 12.16V19a2 2 0 0 1-2 2h-6a1 1 0 0 1-1-1v-4H8v4a1 1 0 0 1-1 1H6a2 2 0 0 1-2-2v-6.888ZM13 15a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2Z"
+                        clip-rule="evenodd" />
+                </svg>
+
+            </div>
+            <div class="about">
+                <div class="price">
+                    <h2>24,000 تومان</h2>
+                </div>
+                <div class="about-price">
+                    :بسته بندی تک دونه
+                </div>
+
+            </div>
+            <div class="about">
+                <div class="price">
+                    <h2>390,000 تومان</h2>
+                </div>
+                <div class="about-price">
+                    :بسته بندی 24 عددی
+                </div>
+
+            </div>
+
+            <!-- <div class="about">
+                <h2>چیز کیک لقمه‌ای</h2>
+
+
+                <h2>قیمت بسته بندی تک دونه : 24,000 تومان</h2>
+
+
+                <h2>قیمت بسته‌ی 24 عددی : 390,000 تومان</h2>
+            </div> -->
+            <div class="mini">
+                <img src="photo/mini1.jpg">
+                <img src="photo/mini2.jpg">
+                <img src="photo/mini3.jpg">
+                <img src="photo/mini4.jpg">
+                <img src="photo/mini5.JPG">
+            </div>
+        </ul>
+    </div>
 </body>
 
 </html>
