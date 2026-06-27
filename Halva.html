@@ -21,36 +21,94 @@
         .main {
             text-align: center;
             min-height: 100vh;
-            margin: 3%;
+            margin: 4%;
             border-radius: 40px;
             box-shadow: 6px 6px 15px rgb(53, 53, 53), -6px -6px 15px rgb(53, 53, 53);
             background-color: #d9caac;
         }
 
-        h3 {
-            font-size: 5vw;
+        header {
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+            justify-content: space-between;
+        }
+
+        h1 {
+            color: #65643a;
+            font-size: 24px;
+        }
+
+        a {
+            color: #65643a;
+        }
+
+        .price{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            margin: 0 10px 0 15px;
+        }
+
+        .about{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            gap: 5px;
+        }
+
+        p {
+            font-size: 20px;
             display: inline-block;
-            border-radius: 500px 550px 350px 250px;
-            background-color: #65643a;
-            padding: 4vw;
-            color: rgb(231, 225, 218);
-            margin: 3vw;
+            color: rgba(84, 54, 19, 0.854);
         }
 
         img {
-            width: 60vw;
-            margin: 7vw 0;
-            border-radius: 200px 250px 300px 250px;
-            border: solid 10px #4d5a3d;
-            box-shadow: 25px 25px #65643a;
+            width: 90%;
+            margin: 20px 0 25px;
+            border-radius: 30px;
+            box-shadow: 3px 3px 10px #434327;
+        }
+
+        @media screen and (min-width:768px){
+            .main{
+                width: 500px;
+                margin: 3% auto;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="main">
-        <h3>قیمت کیلویی : 490,000 تومان</h3>
-        <h3> قیمت پک 24 عددی تارت حلوا : 390,000 تومان</h3>
+        <header>
+            <a href="index.html">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    width="30" height="30" fill="none" viewBox="0 0 24 24">
+                    <path stroke="#65643a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M14.5 8.046H11V6.119c0-.921-.9-1.446-1.524-.894l-5.108 4.49a1.2 1.2 0 0 0 0 1.739l5.108 4.49c.624.556 1.524.027 1.524-.893v-1.928h2a3.023 3.023 0 0 1 3 3.046V19a5.593 5.593 0 0 0-1.5-10.954Z" />
+                </svg>
+            </a>
+            <h1>حلوا</h1>
+        </header>
+        <div class="price">
+            <div class="about">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="rgba(84, 54, 19, 0.854)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.3058 8.29519C9.55698 9.38222 8.81979 11.2498 9.00197 13.9395M14.667 4.18096l-1.0565.50487c-.3418.13297-1.523.3194-1.7152.3194-4.83207.6468-7.74553 5.76877-5.88136 10.33957l.4506 1.1049c.07315.1793.1279.4848.13448.5625.00656.0775.09722 1.1779.09749 1.1811.00001.0001 0 .0001.00001.0002.10784 1.3052 1.46355 2.1014 2.63163 1.5474.00336-.0016.00624-.003.00959-.0046.07162-.0347.97416-.4719 1.05206-.5027.081-.032.3576-.1377.5472-.1631l1.168-.1563c4.832-.6468 7.7455-5.7687 5.8813-10.33958l-.4506-1.10485c-.0731-.17935-.1185-.3691-.1345-.56253l-.0975-1.18113c-.1079-1.30718-1.4674-2.10389-2.6367-1.54515Z" />
+                </svg>
+                <p>قیمت کیلویی</p>
+            </div>
+            <p>490,000 تومان</p>
+        </div>
+        <div class="price">
+            <div class="about">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="rgba(84, 54, 19, 0.854)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.3058 8.29519C9.55698 9.38222 8.81979 11.2498 9.00197 13.9395M14.667 4.18096l-1.0565.50487c-.3418.13297-1.523.3194-1.7152.3194-4.83207.6468-7.74553 5.76877-5.88136 10.33957l.4506 1.1049c.07315.1793.1279.4848.13448.5625.00656.0775.09722 1.1779.09749 1.1811.00001.0001 0 .0001.00001.0002.10784 1.3052 1.46355 2.1014 2.63163 1.5474.00336-.0016.00624-.003.00959-.0046.07162-.0347.97416-.4719 1.05206-.5027.081-.032.3576-.1377.5472-.1631l1.168-.1563c4.832-.6468 7.7455-5.7687 5.8813-10.33958l-.4506-1.10485c-.0731-.17935-.1185-.3691-.1345-.56253l-.0975-1.18113c-.1079-1.30718-1.4674-2.10389-2.6367-1.54515Z" />
+                </svg>
+                <p>قیمت پک 24 عددی تارت حلوا</p>
+            </div>
+            <p>490,000 تومان</p>
+        </div>
         <img src="photo/halva.png">
     </div>
 </body>
